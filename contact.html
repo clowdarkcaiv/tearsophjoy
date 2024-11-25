@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me - Tearsophjoy</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">Tearsophjoy</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="contact">
+    <div class="contact-header">
+      <h2>Let's Get in Touch</h2>
+      <p>Use this contact form for all inquiries or reach out to us using the information below.</p>
+    </div>
+    <div class="contact-details">
+      <div class="contact-item">
+        <div class="icon-circle">
+          <img src="email.png" alt="Email Icon">
+        </div>
+        <h3>Email</h3>
+        <p>tearsophjoy@gmail.com</p>
+      </div>
+      <div class="contact-item">
+        <div class="icon-circle">
+          <img src="time.png" alt="Time Icon">
+        </div>
+        <h3>Working Hours</h3>
+        <p>Monday to Sunday:</p>
+		<p>9:00 AM – 6:00 PM</p>
+      </div>
+    </div>
+	
+<div class="contact-form">
+  <form action="mailto:tearsophjoy@gmail.com" method="POST" enctype="text/plain">
+    <div class="form-group">
+      <input type="text" name="name" placeholder="Name" required>
+    </div>
+    <div class="form-group">
+      <input type="email" name="email" placeholder="Email" required>
+    </div>
+    <div class="form-group">
+      <textarea name="message" rows="5" placeholder="Message" required></textarea>
+    </div>
+    <button type="submit">Send Message</button>
+  </form>
+</div>
+
+  </section>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Tearsophjoy</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">Tearsophjoy</a>
+      <nav class="navbar">
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact Me</a></li>
+  </ul>
+</nav>
+
+  </header>
+
+
+  <section class="services">
+  <h2>My Services</h2>
+  <p>I offer a variety of creative services tailored to meet your needs.</p>
+  <div class="services-grid">
+    <div class="service-item">
+      <img src="icon1.jpg" alt="Custom Artwork">
+      <h3>Custom Artwork</h3>
+      <p>Create personalized pieces to match your vision.</p>
+    </div>
+    <div class="service-item">
+      <img src="icon2.png" alt="Art Workshops">
+      <h3>Art Workshops</h3>
+      <p>Host fun and educational art sessions.</p>
+    </div>
+    <div class="service-item">
+      <img src="icon3.png" alt="Consultation">
+      <h3>Consultation</h3>
+      <p>Discuss and plan your artistic projects with a professional touch.</p>
+    </div>
+    <div class="service-item">
+      <img src="icon4.jpg" alt="Digital Painting">
+      <h3>Digital Painting</h3>
+      <p>Creative and unique designs for digital and print media.</p>
+    </div>
+  </div>
+  </section>
+  
+  <section class="sample-artworks">
+  <h2>Sample Artworks</h2>
+  <p>Take a glimpse of my portfolio showcasing passion and artistry</p>
+  <div class="artworks-grid">
+    <div class="artwork-item" data-image="artwork1.png">
+      <img src="artwork1.png" alt="Artwork 1">
+    </div>
+    <div class="artwork-item" data-image="artwork2.jpg">
+      <img src="artwork2.jpg" alt="Artwork 2">
+    </div>
+    <div class="artwork-item" data-image="artwork3.jpg">
+      <img src="artwork3.jpg" alt="Artwork 3">
+    </div>
+    <div class="artwork-item" data-image="artwork4.jpg">
+      <img src="artwork4.jpg" alt="Artwork 4">
+    </div>
+    <div class="artwork-item" data-image="artwork5.png">
+      <img src="artwork5.png" alt="Artwork 5">
+    </div>
+    <div class="artwork-item" data-image="artwork6.png">
+      <img src="artwork6.png" alt="Artwork 6">
+    </div>
+	<div class="artwork-item" data-image="icon1.jpg">
+      <img src="icon1.jpg" alt="Artwork 7">
+    </div>
+	<div class="artwork-item" data-image="icon4.jpg">
+      <img src="icon4.jpg" alt="Artwork 8">
+    </div>
+	<div class="artwork-item" data-image="icon3.png">
+      <img src="icon3.png" alt="Artwork 9">
+    </div>
+	 <div class="artwork-item" data-image="artwork7.png">
+      <img src="artwork7.png" alt="Artwork 10">
+    </div>
+	 <div class="artwork-item" data-image="artwork8.png">
+      <img src="artwork8.png" alt="Artwork 11">
+    </div>
+	<div class="artwork-item" data-image="artwork9.png">
+      <img src="artwork9.png" alt="Artwork 12">
+    </div>
+  </div>
+    <div class="modal" id="artworkModal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage" alt="Artwork">
+  </div>
+</section>
+<script>
+
+const modal = document.getElementById("artworkModal");
+const modalImage = document.getElementById("modalImage");
+const closeModal = document.querySelector(".close");
+
+
+document.querySelectorAll(".artwork-item").forEach(item => {
+  item.addEventListener("click", function () {
+    const imageSrc = this.getAttribute("data-image"); 
+    modalImage.src = imageSrc; 
+    modal.style.display = "flex"; 
+  });
+});
+
+
+closeModal.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+
+modal.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+});
+</script>
+
+
+</body>
+</html>
